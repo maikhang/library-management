@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::prefix('admin/')->group(function () {
-    Route::get('/', function () {
-        return view('admin.index');
+Route::group(['middleware' => ['web']], function () {
+    
+    Route::prefix('admin/')->group(function () {
+        Route::get('/', function () {
+            return view('admin.index');
+        });
+     
+        Route::resource('category', CategoryController::class);
     });
+
 });

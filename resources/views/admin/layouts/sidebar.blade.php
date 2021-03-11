@@ -37,8 +37,8 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Quản lý:</h6>
+                <a class="collapse-item" href="{{ route('category.index') }}">Thể Loại</a>
                 <a class="collapse-item" href="buttons.html">Tác Giả</a>
-                <a class="collapse-item" href="cards.html">Thể Loại</a>
                 <a class="collapse-item" href="cards.html">Sách</a>
             </div>
         </div>
