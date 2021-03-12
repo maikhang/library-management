@@ -11697,6 +11697,8 @@ body.sidebar-toggled footer.sticky-footer {
     width: 100%;
 }
 
+/*=========== Custom CSS ===========*/
+
 /* Font */
 @font-face {
     font-family: "Nunito";
@@ -11713,4 +11715,9 @@ body.sidebar-toggled footer.sticky-footer {
         url("../fonts/Nunito/Nunito-Regular.ttf"),
         url("../fonts/Nunito/Nunito-SemiBold.ttf"),
         url("../fonts/Nunito/Nunito-SemiBoldItalic.ttf");
+}
+
+/* Style  CKeditor*/
+.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline.ck-blurred {
+    min-height: 200px;
 }

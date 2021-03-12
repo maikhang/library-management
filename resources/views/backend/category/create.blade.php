@@ -3,10 +3,6 @@
 @section('content')
     <!-- Begin Page Content -->
     <div class="container-fluid">
-
-        <!-- Session Alert -->
-        
-
         <!-- Page Heading -->
         <h1 class="h3 mb-2 text-gray-800">Create Category</h1>
 
@@ -33,7 +29,6 @@
                 </div>
               </div>
         </div>
-
     </div>
     <!-- /.container-fluid -->
 @endsection

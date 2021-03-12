@@ -5,8 +5,8 @@
     <div class="container-fluid">
 
         <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">Book List</h1>
-        <p class="mb-4">All data about the Books are available here</p>
+        <h1 class="h3 mb-2 text-gray-800">Category List</h1>
+        <p class="mb-4">All data about the Categories of Book are available here</p>
         <a href="{{ route('category.create') }}" class="btn btn-success btn-icon-split mb-2">
             <span class="text">Add New</span>
         </a>

@@ -14,9 +14,9 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="{{ route('admin.index') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Tổng quan</span></a>
+            <span>Dashboard</span></a>
     </li>
 
     <!-- Divider -->
@@ -24,7 +24,7 @@
 
     <!-- Heading -->
     <div class="sidebar-heading">
-        Quản lý
+        Management
     </div>
 
     <!-- Nav Item - Pages Collapse Menu -->
@@ -32,14 +32,14 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
             aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-table"></i>
-            <span>Sách</span>
+            <span>Book</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Quản lý:</h6>
-                <a class="collapse-item" href="{{ route('category.index') }}">Thể Loại</a>
-                <a class="collapse-item" href="buttons.html">Tác Giả</a>
-                <a class="collapse-item" href="cards.html">Sách</a>
+                <h6 class="collapse-header">Manage:</h6>
+                <a class="collapse-item" href="{{ route('category.index') }}">Category</a>
+                <a class="collapse-item" href="{{ route('author.index') }}">Author</a>
+                <a class="collapse-item" href="cards.html">Book</a>
             </div>
         </div>
     </li>
@@ -47,13 +47,13 @@
     <li class="nav-item">
         <a class="nav-link" href="tables.html">
           <i class="fas fa-fw fa-table"></i>
-          <span>Người Dùng</span></a>
+          <span>User</span></a>
     </li>
 
     <li class="nav-item">
         <a class="nav-link" href="tables.html">
           <i class="fas fa-fw fa-table"></i>
-          <span>Mượn Sách</span></a>
+          <span>Book Borrow</span></a>
     </li>
 
     <!-- Divider -->

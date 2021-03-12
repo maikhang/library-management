@@ -15,7 +15,8 @@ class Category extends Eloquent
         'name'
     ];
 
-    protected $created_at = false;
-    protected $updated_at = false;
+    // protected $created_at = false;
+    // protected $updated_at = false;
 
+    public $timestamps = FALSE;
 }

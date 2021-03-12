@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\CategoryController;
 
 /*
@@ -23,9 +24,10 @@ Route::group(['middleware' => ['web']], function () {
     Route::prefix('admin/')->group(function () {
         Route::get('/', function () {
             return view('admin.index');
-        });
+        })->name('admin.index');
      
         Route::resource('category', CategoryController::class);
+        Route::resource('author', AuthorController::class);
     });
 
 });
