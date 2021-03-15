@@ -14,8 +14,8 @@ class CreateAuthorsTable extends Migration
     public function up()
     {
         Schema::create('authors', function ($collection) {
-            $collection->string('name')->nullable(false);
-            $collection->biography('text')->nullable(true);
+            $collection->string('name')->nullable(false)->unique();
+            $collection->text('biography')->nullable(true);
         });
     }
 

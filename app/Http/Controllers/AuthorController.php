@@ -39,10 +39,11 @@ class AuthorController extends Controller
         // Validation
         $validated = $request->validate(
         [
-            'name' => 'required',
+            'name' => 'required|unique:authors',
         ],
         [
             'name.required' => 'This field is required',
+            'name.unique' => 'This name has already been taken',
         ]
         );
 
@@ -90,10 +91,11 @@ class AuthorController extends Controller
         // Validation
         $validated = $request->validate(
         [
-            'name' => 'required|unique:categories|max:255',
+            'name' => 'required|unique:authors',
         ],
         [
             'name.required' => 'This field is required',
+            'name.unique' => 'This name has already been taken',
         ]
         );
 
