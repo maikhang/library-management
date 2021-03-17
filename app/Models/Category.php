@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Book;
 use Illuminate\Database\Eloquent\Model;
 use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Category extends Eloquent
 {
@@ -19,4 +20,8 @@ class Category extends Eloquent
     // protected $updated_at = false;
 
     public $timestamps = FALSE;
+    
+    public function books() {
+		return $this->hasMany(Book::class);
+	}
 }

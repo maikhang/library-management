@@ -26,6 +26,9 @@
     <!-- CKeditor5 -->
     <script src="{{ asset('asset/ckeditor5/ckeditor.js') }}"></script>
 
+    {{-- Bootstrap-select --}}
+    <link rel="stylesheet" href="{{ asset('vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}">
+
 </head>
 
 <body id="page-top">
@@ -104,6 +107,9 @@
 
     <!-- Page level custom scripts -->
     <script src="{{ asset('asset/js/demo/datatables-demo.js') }}"></script>
+
+    {{-- Bootstrap-select --}}
+    <script src="{{ asset('vendor/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
 
     <!-- SweetAlert -->
     @include('sweetalert::alert')

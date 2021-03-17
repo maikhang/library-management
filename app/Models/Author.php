@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Book;
 use Illuminate\Database\Eloquent\Model;
 use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Author extends Eloquent
 {
@@ -18,4 +19,8 @@ class Author extends Eloquent
     // protected $created_at = false;
     // protected $updated_at = false;
     public $timestamps = FALSE;
+
+    public function books() {
+		return $this->hasMany(Book::class);
+	}
 }
