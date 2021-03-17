@@ -39,9 +39,8 @@
                                 <td style="width: 30%">
                                     <a href="{{ route('category.edit', $category->id) }}" class="btn btn-primary btn-icon-split">
                                         <span class="icon text-white-50">
-                                            <i class="fas fa-info-circle"></i>
+                                            <i class="fas fa-edit"></i>  
                                         </span>
-                                        <span class="text">Edit</span>
                                     </a>
                                     <a  
                                         class="btn btn-danger btn-icon-split"
@@ -59,7 +58,6 @@
                                         <span class="icon text-white-50">
                                             <i class="fas fa-trash"></i>
                                         </span>
-                                        <span class="text">Delete</span>
                                     </a>
                                 </th>
                             </tr>
