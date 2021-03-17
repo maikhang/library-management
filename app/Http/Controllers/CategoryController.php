@@ -91,7 +91,7 @@ class CategoryController extends Controller
         // Validation
         $validated = $request->validate(
         [
-            'name' => 'required|unique:categories|max:255',
+            'name' => 'required|max:255|unique:categories'.$id,
         ],
         [
             'name.required' => 'This field is required',

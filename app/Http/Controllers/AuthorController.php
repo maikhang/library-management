@@ -91,7 +91,7 @@ class AuthorController extends Controller
         // Validation
         $validated = $request->validate(
         [
-            'name' => 'required|unique:authors',
+            'name' => 'required|unique:authors'.$id,
         ],
         [
             'name.required' => 'This field is required',
