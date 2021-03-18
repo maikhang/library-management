@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthorController;
+use App\Http\Controllers\BookBorrowController;
 use App\Http\Controllers\CategoryController;
 
 /*
@@ -32,6 +33,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::resource('author', AuthorController::class);
         Route::resource('book', BookController::class);
         Route::resource('user', UserController::class);
+        Route::resource('bookBorrow', BookBorrowController::class);
     });
 
 });
