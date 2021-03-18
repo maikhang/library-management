@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\CategoryController;
 
 /*
@@ -30,6 +31,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::resource('category', CategoryController::class);
         Route::resource('author', AuthorController::class);
         Route::resource('book', BookController::class);
+        Route::resource('user', UserController::class);
     });
 
 });
