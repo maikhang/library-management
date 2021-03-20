@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookBorrowController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,10 +26,8 @@ Route::get('/', function () {
 Route::group(['middleware' => ['web']], function () {
     
     Route::prefix('admin/')->group(function () {
-        Route::get('/', function () {
-            return view('admin.index');
-        })->name('admin.index');
-     
+        Route::get('/', [AdminController::class, 'index'])->name('admin.index');
+        
         Route::resource('category', CategoryController::class);
         Route::resource('author', AuthorController::class);
         Route::resource('book', BookController::class);
