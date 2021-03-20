@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Ho_Chi_Minh',
 
     /*
     |--------------------------------------------------------------------------
@@ -176,8 +176,6 @@ return [
         App\Providers\RouteServiceProvider::class,
         // MongoDB Service
         Jenssegers\Mongodb\MongodbServiceProvider::class,
-        // SweetAlert
-        RealRashid\SweetAlert\SweetAlertServiceProvider::class,
     ],
 
     /*
@@ -229,8 +227,6 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        // SweetAlert
-        'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
     ],
 
 ];

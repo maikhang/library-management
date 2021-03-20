@@ -29,6 +29,9 @@
     {{-- Bootstrap-select --}}
     <link rel="stylesheet" href="{{ asset('vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}">
 
+    {{-- SweetAlert2 --}}
+    <link rel="stylesheet" href="{{ asset('vendor/sweetalert2/dist/sweetalert2.min.css') }}">
+
 </head>
 
 <body id="page-top">
@@ -112,8 +115,28 @@
     <script src="{{ asset('vendor/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
 
     <!-- SweetAlert -->
-    @include('sweetalert::alert')
-    
+    <script src="{{ asset('vendor/sweetalert2/dist/sweetalert2.min.js') }}"></script>
+    @if(Session::has('toast_success'))
+        <script>
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                showCloseButton: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+
+            Toast.fire({
+                icon: 'success',
+                title: "{!! Session::get('toast_success') !!}"
+            })
+        </script>
+    @endif
 </body>
 
 </html>

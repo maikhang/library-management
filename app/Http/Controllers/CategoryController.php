@@ -52,20 +52,22 @@ class CategoryController extends Controller
         $categories = Category::create([
             'name' => $request->name,
         ]);
-
+        
         return redirect()->back()->with('toast_success', 'Category Created Successfully!');
+        // return redirect()->back()->with('toast_success', 'Category Created Successfully!')->session()->pull('toast_success', 'Category Created Successfully');
+        // return redirect()->back()->session()->flash('toast_success', 'Category Created Successfully!');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+    // /**
+    //  * Display the specified resource.
+    //  *
+    //  * @param  int  $id
+    //  * @return \Illuminate\Http\Response
+    //  */
+    // public function show($id)
+    // {
+    //     //
+    // }
 
     /**
      * Show the form for editing the specified resource.

@@ -95,11 +95,13 @@ class BookController extends Controller
         $bookIds = [];
         $books = Book::find($id);
         $authors = Author::all();
-        foreach($books->author as $bookItem)
-        {
-            $bookIds[] = $bookItem;
-        }  
-        $authors = Author::all();
+        if(is_array($books->author)){
+            foreach($books->author as $bookItem)
+            {
+                $bookIds[] = $bookItem;
+            } 
+        }
+
         return view('backend.book.edit', compact('books', 'categories', 'authors', 'bookIds'));     
     }
 

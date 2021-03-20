@@ -16,6 +16,7 @@
 
                       <div class="form-group">
                         <label for="exampleInputName1">Name</label>
+                        <sup style="color: red">*</sup>
                         <input type="text" name="name" class="form-control mb-1" id="exampleInputName1" placeholder="Name of Category" value="{{ $authors->name }}">
                         @error('name')
                         <span class="text-danger" role="alert">

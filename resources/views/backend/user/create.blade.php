@@ -16,6 +16,7 @@
                       <div class="row">
                         <div class="form-group col-md-6">
                           <label>Name</label>
+                          <sup style="color: red">*</sup>
                           <input type="text" name="name" class="form-control mb-1" placeholder="Name of User" value="{{old('name')}}">
                           @error('name')
                           <span class="text-danger" role="alert">
@@ -26,6 +27,7 @@
 
                         <div class="form-group col-md-6">
                           <label>Email</label>
+                          <sup style="color: red">*</sup>
                           <input type="email" name="email" class="form-control mb-1" placeholder="Email of User" value="{{old('email')}}">
                           @error('email')
                           <span class="text-danger" role="alert">
@@ -37,6 +39,7 @@
                       
                       <div class="form-group">
                         <label>Address</label>
+                        <sup style="color: red">*</sup>
                         <input type="text" name="address" class="form-control mb-1" placeholder="Address of User" value="{{old('address')}}">
                         @error('address')
                         <span class="text-danger" role="alert">
@@ -47,6 +50,7 @@
 
                       <div class="form-group">
                         <label>Phone</label>
+                        <sup style="color: red">*</sup>
                         <input type="text" name="phone" class="form-control mb-1" placeholder="Phone of User" value="{{old('phone')}}">
                         @error('phone')
                         <span class="text-danger" role="alert">

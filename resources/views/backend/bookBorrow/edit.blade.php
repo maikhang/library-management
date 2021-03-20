@@ -16,6 +16,7 @@
 
                       <div class="form-group">
                         <label for="exampleInputName1">Book</label>
+                        <sup style="color: red">*</sup>
                         <select class="form-control selectpicker" data-live-search="true" multiple  name="book[]" title="Choose one or more of the following...">
                           @foreach ($books as $book)
                             @if(in_array($book->name, $bookBorrowIds))
@@ -37,6 +38,7 @@
                       <div class="row"> 
                         <div class="form-group col-md-8">
                           <label for="exampleInputName1">User</label>
+                          <sup style="color: red">*</sup>
                           <select class="form-control selectpicker" data-live-search="true" title="Choose one of the following..." name="email">
                             @foreach ($users as $user)
                             <option value="{{ $user->email }}" data-subtext="{{ $user->email }}" @php if($user->email == $book_borrows->email) echo "selected"; @endphp>{{ $user->name }}</option>
@@ -51,6 +53,7 @@
 
                         <div class="form-group col-md-4">
                           <label for="exampleInputName1">Status</label>
+                          <sup style="color: red">*</sup>
                           <select class="form-control selectpicker" name="status" title="Choose one of the following...">
                             <option value="Borrowing" data-content="<h5><span class='badge badge-warning'>Borrowing</span></h5>" @php if($book_borrows->status == "Borrowing") echo "selected" @endphp>Borrowing</option>
                             <option value="Completed" data-content="<h5><span class='badge badge-success'>Completed</span></h5>" @php if($book_borrows->status == "Completed") echo "selected" @endphp>Completed</option>
