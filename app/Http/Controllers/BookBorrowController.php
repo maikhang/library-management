@@ -128,6 +128,9 @@ class BookBorrowController extends Controller
         if($book_borrows->status == 'Completed') {
             $book_borrows->completed_time = Carbon::now()->toDateTimeString();
         }
+        else {
+            $book_borrows->completed_time = null;
+        }
 
         $book_borrows->save();
 
