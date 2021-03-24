@@ -44,7 +44,7 @@ class CategoryController extends Controller
         [
             'name.required' => 'This field is required',
             'name.unique' => 'This Name has already been taken ',
-            'name.max' => 'The Name field may not be greater than 255 characters ',
+            'name.max' => 'The Name field may not be greater than 255 characters',
         ]
         );
 
@@ -54,8 +54,6 @@ class CategoryController extends Controller
         ]);
         
         return redirect()->back()->with('toast_success', 'Category Created Successfully!');
-        // return redirect()->back()->with('toast_success', 'Category Created Successfully!')->session()->pull('toast_success', 'Category Created Successfully');
-        // return redirect()->back()->session()->flash('toast_success', 'Category Created Successfully!');
     }
 
     // /**

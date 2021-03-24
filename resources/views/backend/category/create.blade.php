@@ -1,27 +1,6 @@
 @extends('admin.admin_master')
 
 @section('content')
-  {{-- @if(Session::has('toast_success'))
-    <script>
-      const Toast = Swal.mixin({
-        toast: true,
-        position: 'top-end',
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        showCloseButton: true,
-        didOpen: (toast) => {
-            toast.addEventListener('mouseenter', Swal.stopTimer)
-            toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
-      })
-
-      Toast.fire({
-        icon: 'success',
-        title: 'Category Created Successfully!'
-      })
-    </script>
-  @endif --}}
   <!-- Begin Page Content -->
   <div class="container-fluid">
       <!-- Page Heading -->
