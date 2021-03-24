@@ -66,4 +66,4 @@ Link download:
 
 ## Live Demo
 
-Link: [library-management-mhkhang.herokuapp.com](https://library-management-mhkhang.herokuapp.com/admin)
+Link: [library-management-mhkhang.herokuapp.com](http://library-management-mhkhang.herokuapp.com/admin)
