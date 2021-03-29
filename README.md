@@ -55,14 +55,15 @@ Library Management Website using Laravel 8 & MongoDB 4.4
 
 P/S:
 
-> Make sure you installed PHP > 7.0.0 And MongoDB 4.4 and MongoDB PHP Driver
+> Make sure you installed PHP > 7.0.0, Composer 2.0, MongoDB 4.4 and MongoDB PHP Driver
 
 Link download:
 
 -   MongoDB: [PHP: Downloads](https://www.php.net/downloads)
 -   MongoDB: [MongoDB Community Download | MongoDB](https://www.mongodb.com/try/download/community)
 -   MongoDB PHP Driver: [PHP: Installing/Configuring - Manual](https://www.php.net/manual/en/mongodb.setup.php)
+-   Composer: [Composer](https://getcomposer.org/download/)
 
 ## Live Demo
 
-Link: [library-management-mhkhang.herokuapp.com](https://library-management-mhkhang.herokuapp.com/admin)
+Link: [library-management-mhkhang.herokuapp.com](http://library-management-mhkhang.herokuapp.com/admin)
