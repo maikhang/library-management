@@ -15,7 +15,7 @@ class AdminController extends Controller
         $categories = Category::all()->count();
         $books = Book::all()->count();
         $users = User::all()->count();
-        $book_borrows = BookBorrow::all()->count();
+        $book_borrows = BookBorrow::all()->where('status', '=', 'Borrowing')->count();
 
         return view('admin.index', compact('categories', 'books', 'users', 'book_borrows'));
     }
