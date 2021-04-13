@@ -1,6 +1,12 @@
-﻿# Library Management
+﻿﻿# Library Management
 
 Library Management Website using Laravel 8 & MongoDB 4.4
+
+## Live Demo
+
+Link: [library-management-mhkhang.herokuapp.com](http://library-management-mhkhang.herokuapp.com/admin)
+
+![alt text](https://github.com/maikhang/library-management/blob/master/public/asset/img/screenshot.png?raw=true)
 
 ## Usage
 
@@ -46,12 +52,16 @@ Library Management Website using Laravel 8 & MongoDB 4.4
     To:
     'default' => env('DB_CONNECTION', 'mongodb')
 
-5.  Start MongoDB server
-6.  Start Laravel Server with CMD:
+5.  Create app key with CMD:
+
+    `php artisan key:generate`
+
+6.  Start MongoDB server
+7.  Start Laravel Server with CMD:
 
     `php artisan serve`
 
-7.  Acess http://127.0.0.1:8000/admin and enjoy !
+8.  Acess http://127.0.0.1:8000/admin and enjoy !
 
 P/S:
 
@@ -63,7 +73,3 @@ Link download:
 -   MongoDB: [MongoDB Community Download | MongoDB](https://www.mongodb.com/try/download/community)
 -   MongoDB PHP Driver: [PHP: Installing/Configuring - Manual](https://www.php.net/manual/en/mongodb.setup.php)
 -   Composer: [Composer](https://getcomposer.org/download/)
-
-## Live Demo
-
-Link: [library-management-mhkhang.herokuapp.com](http://library-management-mhkhang.herokuapp.com/admin)
