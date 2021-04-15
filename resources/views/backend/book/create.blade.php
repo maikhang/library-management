@@ -70,26 +70,16 @@
                         </div>
                       </div>
                       
-
                       <div class="form-group">
                         <label for="exampleInputName1">Summary</label>
-                        <textarea id="editor" name="summary" class="form-control mb-1" rows="50"></textarea>
+                        <textarea id="editor" name="summary" class="form-control mb-1" rows="3"></textarea>
                         @error('summary')
                         <span class="text-danger" role="alert">
                             <h6>{{ $message }}</h6>
                         </span>
                         @enderror
                       </div>
-                      
-                      {{-- Script for Editor --}}
-                      <script>
-                        ClassicEditor
-                            .create( document.querySelector('#editor'))
-                            .catch( error => {
-                                console.error( error );
-                            } );
-                      </script>
-
+    
                       <button type="submit" name="submit" class="btn btn-success mb-2">Add</button>
                     </form>
                   </div>
@@ -98,4 +88,12 @@
         </div>
     </div>
     <!-- /.container-fluid -->
+@endsection
+
+@section('scripts')
+{{-- Custom Script --}}
+<script>
+  // bootstrap-select
+  $("select").selectpicker();                        
+</script>
 @endsection

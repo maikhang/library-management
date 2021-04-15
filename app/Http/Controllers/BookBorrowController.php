@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Book;
 use App\Models\BookBorrow;
+use App\Models\Category;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -30,7 +31,8 @@ class BookBorrowController extends Controller
     {
         $books = Book::all();
         $users = User::all();
-        return view('backend.bookBorrow.create', compact('books', 'users'));
+        $categories = Category::all();
+        return view('backend.bookBorrow.create', compact('books', 'users', 'categories'));
     }
 
     /**
@@ -83,6 +85,7 @@ class BookBorrowController extends Controller
      */
     public function edit($id)
     {
+        $categories = Category::all();
         $users = User::all();
         $bookBorrowIds = [];
         $book_borrows = BookBorrow::find($id);
@@ -94,7 +97,7 @@ class BookBorrowController extends Controller
             } 
         }
 
-        return view('backend.bookBorrow.edit', compact('books', 'users', 'book_borrows', 'bookBorrowIds'));     
+        return view('backend.bookBorrow.edit', compact('books', 'users', 'book_borrows', 'bookBorrowIds', 'categories'));     
     }
 
     /**

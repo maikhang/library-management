@@ -33,16 +33,7 @@
                         </span>
                         @enderror
                       </div>
-                      
-                      {{-- Script for Editor --}}
-                      <script>
-                        ClassicEditor
-                            .create( document.querySelector('#editor'))
-                            .catch( error => {
-                                console.error( error );
-                            } );
-                      </script>
-
+                                       
                       <button type="submit" name="submit" class="btn btn-success mb-2">Add</button>
                     </form>
                   </div>
@@ -51,4 +42,15 @@
         </div>
     </div>
     <!-- /.container-fluid -->
+@endsection
+
+@section('scripts')
+{{-- Script for Editor --}}
+<script>
+  ClassicEditor
+      .create( document.querySelector('#editor'))
+      .catch( error => {
+          console.error( error );
+      } );
+</script>
 @endsection

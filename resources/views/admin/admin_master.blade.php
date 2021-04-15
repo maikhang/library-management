@@ -12,26 +12,23 @@
     <title>Pro Library</title>
 
     <!-- Custom fonts for this template -->
-    <link href="{{ asset('asset/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
-    {{-- <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet"> --}}
-    <link rel="icon" href="{{ asset('asset/img/logo.png') }}" type="image/icon type">
-        
+    <link href="/asset/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="/asset/img/logo.png" type="image/icon type">
+    
     <!-- Custom styles for this template -->
-    <link href="{{ asset('asset/css/sb-admin-2.min.css') }}" rel="stylesheet">
+    <link href="/asset/css/sb-admin-2.min.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="{{ asset('asset/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+    <link href="/asset/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
     <!-- CKeditor5 -->
-    <script src="{{ asset('asset/ckeditor5/ckeditor.js') }}"></script>
+    <script src="/asset/ckeditor5/ckeditor.js"></script>
 
     {{-- Bootstrap-select --}}
-    <link rel="stylesheet" href="{{ asset('vendor/bootstrap-select/dist/css/bootstrap-select.min.css') }}">
+    <link rel="stylesheet" href="/vendor/bootstrap-select/dist/css/bootstrap-select.min.css">
 
     {{-- SweetAlert2 --}}
-    <link rel="stylesheet" href="{{ asset('vendor/sweetalert2/dist/sweetalert2.min.css') }}">
+    <link rel="stylesheet" href="/vendor/sweetalert2/dist/sweetalert2.min.css">
 
 </head>
 
@@ -96,27 +93,30 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="{{ asset('asset/vendor/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('asset/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="/asset/vendor/jquery/jquery.min.js"></script>
+    <script src="/asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="{{ asset('asset/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+    <script src="/asset/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="{{ asset('asset/js/sb-admin-2.min.js') }}"></script>
+    <script src="/asset/js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="{{ asset('asset/vendor/datatables/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('asset/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="/asset/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="/asset/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="{{ asset('asset/js/demo/datatables-demo.js') }}"></script>
+    <script src="/asset/js/demo/datatables-demo.js"></script>
 
     {{-- Bootstrap-select --}}
-    <script src="{{ asset('vendor/bootstrap-select/dist/js/bootstrap-select.min.js') }}"></script>
+    <script src="/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+
+    <!-- Script -->
+    @yield('scripts')
 
     <!-- SweetAlert -->
-    <script src="{{ asset('vendor/sweetalert2/dist/sweetalert2.min.js') }}"></script>
+    <script src="/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
     @if(Session::has('toast_success'))
         <script>
             const Toast = Swal.mixin({
@@ -138,6 +138,7 @@
             })
         </script>
     @endif
+   
 </body>
 
 </html>

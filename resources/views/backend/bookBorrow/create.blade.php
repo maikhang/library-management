@@ -17,8 +17,14 @@
                         <label for="exampleInputName1">Book</label>
                         <sup style="color: red">*</sup>
                         <select class="form-control selectpicker" data-live-search="true" multiple  name="book[]" title="Choose one or more of the following...">
-                          @foreach ($books as $book)
-                          <option value="{{ $book->name }}">{{ $book->name }}</option>
+                          @foreach ($categories as $category)
+                            <optgroup label="{{ $category->name }}">
+                              @foreach ($books as $book)
+                              @if ($book->category === $category->name)
+                                <option value="{{ $book->name }}" @php if($book->status==='Out of Stock') echo 'disabled'; @endphp>{{ $book->name }}</option>
+                              @endif
+                              @endforeach
+                            </optgroup>
                           @endforeach
                         </select>
                         @error('book')
@@ -42,7 +48,7 @@
                         </span>
                         @enderror
                       </div>
-                      
+                                           
                       <button type="submit" name="submit" class="btn btn-success mb-2">Add</button>
                     </form>
                   </div>
@@ -51,4 +57,12 @@
         </div>
     </div>
     <!-- /.container-fluid -->
+@endsection
+
+@section('scripts')
+{{-- Custom Script --}}
+<script>
+  // bootstrap-select
+  $("select").selectpicker();                        
+</script>
 @endsection

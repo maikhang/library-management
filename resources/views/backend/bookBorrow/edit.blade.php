@@ -18,14 +18,20 @@
                         <label for="exampleInputName1">Book</label>
                         <sup style="color: red">*</sup>
                         <select class="form-control selectpicker" data-live-search="true" multiple  name="book[]" title="Choose one or more of the following...">
-                          @foreach ($books as $book)
-                            @if(in_array($book->name, $bookBorrowIds))
-                            <option value="{{ $book->name }}" selected>{{ $book->name }}</option>
-                            @elseif ((!is_array($book->name)) && ($book->name == $book_borrows->book))
-                            <option value="{{ $book->name }}" selected>{{ $book->name }}</option>
-                            @else
-                            <option value="{{ $book->name }}">{{ $book->name }}</option>
-                            @endif 
+                          @foreach ($categories as $category)
+                            <optgroup label="{{ $category->name }}">
+                            @foreach ($books as $book)
+                              @if ($book->category === $category->name)
+                                @if(in_array($book->name, $bookBorrowIds))
+                                  <option value="{{ $book->name }}" selected>{{ $book->name }}</option>
+                                  {{-- @elseif ((!is_array($book->name)) && ($book->name == $book_borrows->book))
+                                  <option value="{{ $book->name }}" selected @php if($book->status==='Out of Stock') echo 'disabled'; @endphp>{{ $book->name }}</option> --}}
+                                  @else
+                                  <option value="{{ $book->name }}" @php if($book->status==='Out of Stock') echo 'disabled'; @endphp>{{ $book->name }}</option>
+                                  @endif
+                                @endif
+                            @endforeach
+                            </optgroup>
                           @endforeach
                         </select>
                         @error('book')
@@ -90,4 +96,12 @@
         </div>
     </div>
     <!-- /.container-fluid -->
+@endsection
+
+@section('scripts')
+{{-- Custom Script --}}
+<script>
+  // bootstrap-select
+  $("select").selectpicker();                        
+</script>
 @endsection
